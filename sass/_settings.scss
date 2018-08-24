@@ -1,0 +1,60 @@
+
+
+
+$desktop_column_width: 1200px;
+
+$filesPath: '../';
+
+
+
+// Colours
+
+$c_teal:          #45b7b7;
+$c_teal-light:    #50bcbc;
+$c_teal-dark:     #348286;
+$c_grey:          #464646;
+$c_white:         #fff;
+$c_black:         #000;
+
+
+
+// Mapped Colours
+
+$cm_primary:        $c_grey;
+$cm_secondary:      $c_teal;
+$cm_tertiary:       $c_teal-dark;
+
+
+// Padding
+
+$pd_primary:         70px;
+$pm_primary:         30px;
+
+$pd_secondary:       30px;
+$pm_secondary:       15px;
+
+
+// Fonts
+
+$font-body: 'Lato', Arial, Helvetica, sans-serif;
+
+
+
+// Fonts Sizes
+
+$fs_heading_desktop_primary:    40px;
+$fs_heading_mobile_primary:     30px;
+
+$fs_heading_desktop_secondary:  34px;
+$fs_heading_mobile_secondary:   26px;
+
+$fs_heading_desktop_tertiary:   24px;
+$fs_heading_mobile_tertiary:    22px;
+
+$fs_body_desktop:               16px;
+$fs_body_mobile:                16px;
+
+$fs_smallPrint_desktop:         15px;
+$fs_smallPrint_mobile:          13px;
+
+

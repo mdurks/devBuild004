@@ -1,0 +1,18 @@
+
+
+
+//  This stylesheet contains the remainder of the
+//  styles after the critical css has been seperated.
+
+
+@import "bourbon/_bourbon.scss";
+@import "neat/_neat.scss";
+
+@import "_breakpoints.scss";
+@import "_settings.scss";
+
+
+
+.page-page2 {
+	display: none;
+}
