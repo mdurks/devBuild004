@@ -37,6 +37,11 @@
 html {
 	color: $c_black;
 	font-family: $font-body;
+	overflow-x: hidden; // for mobile menu
+
+	@include media($sm) {
+		overflow-x: auto; // for mobile menu
+	}
 }
 
 body {
@@ -61,6 +66,32 @@ body {
 		width: $desktop_column_width;
 		margin: auto;
 		padding: 0 30px;
+	}
+}
+
+.hd
+{
+	&_primary {
+		margin-bottom: 10px;
+
+		@include media($sm) {
+			margin-bottom: 30px;
+		}
+	}
+	&_secondary {
+		margin-bottom: 10px;
+
+		@include media($sm) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&_tertiary {
+		margin-bottom: 10px;
+
+		@include media($sm) {
+			margin-bottom: 10px;
+		}
 	}
 }
 
@@ -104,6 +135,7 @@ body {
 		}
 	}
 }
+
 .cm
 {
 	&_primary 		{ color: $cm_primary; }
@@ -111,12 +143,16 @@ body {
 	&_tertiary 		{ color: $cm_tertiary; }
 }
 
-.main p {
-	margin-bottom: 20px;
+.main p
+{
 	line-height: 1.4em;
 
 	@include media($sm) {
 		line-height: 1.5em;
+	}
+
+	&+p {
+		margin-bottom: 20px;
 	}
 }
 
@@ -187,12 +223,18 @@ strong {
 	}
 
 	&__logo {
-		width: 170px;
-		height: $pd_primary;
+		display: block;
+		width: 115px;
+		height: 50px;
 		background-image: url($filesPath + 'img/logo.svg');
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: contain;
+
+		@include media($sm) {
+			width: 170px;
+			height: 70px;
+		}
 	}
 }
 
@@ -224,10 +266,10 @@ strong {
 	&__burgerBtn
 	{
 		position: absolute;
-		top: 16px;
-		right: 16px;
-		width: 34px;
-		height: 34px;
+		top: 10px;
+		right: 10px;
+		width: 30px;
+		height: 30px;
 		padding: 0;
 		border: 2px solid $cm_secondary;
 		border-radius: 100%;
@@ -244,6 +286,7 @@ strong {
 			width: 14px;
 			height: 3px;
 			background-color: $cm_secondary;
+			border-radius: 100px;
 
 			&:nth-child(2) { margin: 2px auto; width: 18px; }
 		}
@@ -328,10 +371,15 @@ strong {
 		padding: 0 0 30px;
 	}
 
-	&__titleBlock {
-		padding: 30px 0;
+	&__titleBlock
+	{
+		padding: 15px 0;
 		background-color: $c_grey;
 		color: $c_white;
+
+		@include media($sm) {
+			padding: 30px 0;
+		}
 	}
 
 	&__phoneNumbers {
@@ -369,17 +417,40 @@ strong {
 
 .hero
 {
-	margin-bottom: $pd_primary;
+	margin-bottom: $pm_primary;
 
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 
-	&--img-home {
+	@include media($sm) {
+		margin-bottom: $pd_primary;
+	}
+
+	&--img-home, &--img-home-mobile, {
 		background-image: url($filesPath + 'img/welcomeHero.png');
 	}
 
-	&__homepageTitle {
+	@include media($mobile-only) {
+		&--img-home-mobile {
+			margin: 0 0 10px;
+			height: 100px;
+			background-repeat: no-repeat;
+			background-position: -12% top;
+			background-size: 200%;
+		}
+	}
+
+	@include media($mobile-only) {
+		&.hero--img-home {
+			background-image: none;
+			background-color: #ececec;
+		}
+	}
+
+	&__homepageTitle
+	{
+		padding-bottom: 15px;
 
 		@include media($sm) {
 			padding: 150px 10% 50px 30%;

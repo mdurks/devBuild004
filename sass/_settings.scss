@@ -3,7 +3,9 @@
 
 $desktop_column_width: 1200px;
 
-$filesPath: '../';
+$filesPath: '../'; // if linking to css file in css folder.
+//$filesPath: ''; // if inlining css, so no pathing needed
+
 
 
 
@@ -28,7 +30,7 @@ $cm_tertiary:       $c_teal-dark;
 // Padding
 
 $pd_primary:         70px;
-$pm_primary:         30px;
+$pm_primary:         15px;
 
 $pd_secondary:       30px;
 $pm_secondary:       15px;
@@ -43,7 +45,7 @@ $font-body: 'Lato', Arial, Helvetica, sans-serif;
 // Fonts Sizes
 
 $fs_heading_desktop_primary:    40px;
-$fs_heading_mobile_primary:     30px;
+$fs_heading_mobile_primary:     22px;
 
 $fs_heading_desktop_secondary:  34px;
 $fs_heading_mobile_secondary:   26px;
