@@ -27,6 +27,20 @@
 	clear: both;
 }
 
+.hide
+{
+	&--mobile {
+		@include media($mobile-only) {
+			display: none;
+		}
+	}
+	&--desktop {
+		@include media($sm) {
+			display: none;
+		}
+	}
+}
+
 
 
 
@@ -107,7 +121,7 @@ body {
 	}
 
 	&_secondary {
-		line-height: 1em;
+		line-height: 1.2em;
 		font-size: $fs_heading_mobile_secondary;
 
 		@include media($sm) {
@@ -115,12 +129,17 @@ body {
 		}
 	}
 
-	&_tertiary {
-		line-height: 1em;
+	&_tertiary
+	{
+		line-height: 1.2em;
 		font-size: $fs_heading_mobile_tertiary;
 
 		@include media($sm) {
 			font-size: $fs_heading_desktop_tertiary;
+		}
+
+		li {
+			margin-bottom: 25px;
 		}
 	}
 
@@ -141,6 +160,7 @@ body {
 	&_primary 		{ color: $cm_primary; }
 	&_secondary 	{ color: $cm_secondary; }
 	&_tertiary 		{ color: $cm_tertiary; }
+	&_white 		{ color: $cm_white; }
 }
 
 .main p
@@ -152,22 +172,33 @@ body {
 	}
 
 	&+p {
-		margin-bottom: 20px;
+		margin-top: 20px;
 	}
 }
 
 .columns
 {
 	margin-bottom: $pm_primary;
+	margin-top: $pm_secondary;
 
 	@include media($sm) {
 		display: flex;
 		margin-bottom: $pd_primary;
+		margin-top: $pd_secondary;
 	}
 
 	.col6 {
-		@include media($sm) {
+
+		@include media($mobile-only)
+		{
+			&:first-child p:last-child { margin-bottom: $pm_secondary; }
+		}
+		@include media($sm)
+		{
 			width: 50%;
+
+			&:first-child { padding-right: $pd_secondary; }
+			&:last-child { padding-left: $pd_secondary; }
 		}
 	}
 
@@ -191,9 +222,18 @@ body {
 		@include media($sm) {
 			flex-direction: row-reverse;
 
-			.col--centerTxt {
+			.col--centerTxt
+			{
 				padding-left: 0;
 				padding-right: $pd_primary;
+			}
+
+			.col6 {
+				@include media($sm)
+				{
+					&:first-child { padding-left: $pd_secondary; }
+					&:last-child { padding-right: $pd_secondary; }
+				}
 			}
 		}
 	}
@@ -201,6 +241,30 @@ body {
 
 strong {
 	font-weight: 700;
+}
+
+.bullet
+{
+	&--tick
+	{
+		position: relative;
+		padding-left: 50px;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 5px;
+			width: 30px;
+			height: 30px;
+			border-radius: 100%;
+			border: 1px solid $cm_primary;
+			content: "\2714";
+			color: $cm_primary;
+			padding: 14px 0 0 8px;
+			font-size: 16px;
+			line-height: 0;
+		}
+	}
 }
 
 
@@ -431,6 +495,10 @@ strong {
 		background-image: url($filesPath + 'img/welcomeHero.png');
 	}
 
+	&--img-about-us {
+		background-image: url($filesPath + 'img/About-Us@2x.png');
+	}
+
 	@include media($mobile-only) {
 		&--img-home-mobile {
 			margin: 0 0 10px;
@@ -454,6 +522,15 @@ strong {
 
 		@include media($sm) {
 			padding: 150px 10% 50px 30%;
+		}
+	}
+
+	&__aboutUsTitle
+	{
+		padding: 85px 15px 15px;
+
+		@include media($sm) {
+			padding: 175px 15% 70px;
 		}
 	}
 }
