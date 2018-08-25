@@ -109,6 +109,11 @@ body {
 	}
 }
 
+.main li
+{
+	margin-bottom: 25px;
+}
+
 .fs
 {
 	&_primary {
@@ -263,6 +268,23 @@ strong {
 			padding: 14px 0 0 8px;
 			font-size: 16px;
 			line-height: 0;
+		}
+	}
+
+	&--disc
+	{
+		position: relative;
+		padding-left: 15px;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 10px;
+			width: 6px;
+			height: 6px;
+			border-radius: 100%;
+			content: "";
+			background-color: $cm_secondary;
 		}
 	}
 }
@@ -499,6 +521,10 @@ strong {
 		background-image: url($filesPath + 'img/About-Us@2x.png');
 	}
 
+	&--img-what-we-do {
+		background-image: url($filesPath + 'img/What-We-Do.png');
+	}
+
 	@include media($mobile-only) {
 		&--img-home-mobile {
 			margin: 0 0 10px;
@@ -531,6 +557,15 @@ strong {
 
 		@include media($sm) {
 			padding: 175px 15% 70px;
+		}
+	}
+
+	&__whatWeDoTitle
+	{
+		padding: 85px 15px 15px;
+
+		@include media($sm) {
+			padding: 175px 20% 70px;
 		}
 	}
 }

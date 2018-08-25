@@ -158,6 +158,10 @@ body {
   }
 }
 
+.main li {
+  margin-bottom: 25px;
+}
+
 .fs_primary {
   line-height: 1em;
   font-size: 22px;
@@ -171,12 +175,12 @@ body {
 
 .fs_secondary {
   line-height: 1.2em;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 @media screen and (min-width: 640px) {
   .fs_secondary {
-    font-size: 34px;
+    font-size: 26px;
   }
 }
 
@@ -343,6 +347,24 @@ strong {
   padding: 14px 0 0 8px;
   font-size: 16px;
   line-height: 0;
+}
+
+.bullet--disc {
+  position: relative;
+  padding-left: 15px;
+}
+
+.bullet--disc::before {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+  content: "";
+  background-color: #45b7b7;
 }
 
 .header {
@@ -623,6 +645,10 @@ strong {
   background-image: url("../img/About-Us@2x.png");
 }
 
+.hero--img-what-we-do {
+  background-image: url("../img/What-We-Do.png");
+}
+
 @media screen and (max-width: 544px) {
   .hero--img-home-mobile {
     margin: 0 0 10px;
@@ -659,5 +685,15 @@ strong {
 @media screen and (min-width: 640px) {
   .hero__aboutUsTitle {
     padding: 175px 15% 70px;
+  }
+}
+
+.hero__whatWeDoTitle {
+  padding: 85px 15px 15px;
+}
+
+@media screen and (min-width: 640px) {
+  .hero__whatWeDoTitle {
+    padding: 175px 20% 70px;
   }
 }
