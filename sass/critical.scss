@@ -172,16 +172,24 @@ body {
 	&_white 		{ color: $cm_white; }
 }
 
-.main p
+.main
 {
-	line-height: 1.4em;
+	p
+	{
+		line-height: 1.4em;
 
-	@include media($sm) {
-		line-height: 1.5em;
+		@include media($sm) {
+			line-height: 1.5em;
+		}
+
+		&+p {
+			margin-top: 20px;
+		}
 	}
 
-	&+p {
-		margin-top: 20px;
+	.unstyledLink {
+		text-decoration: none;
+		color: $cm_primary;
 	}
 }
 
@@ -248,7 +256,7 @@ body {
 	}
 }
 
-strong {
+strong, .bold {
 	font-weight: 700;
 }
 
