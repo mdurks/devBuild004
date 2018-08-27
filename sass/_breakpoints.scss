@@ -34,5 +34,6 @@ $xl            : new-breakpoint(min-width $large-desktop);
 $xxl           : new-breakpoint(min-width $extra-large-desktop);
 $max           : new-breakpoint(min-width $max-screen);
 $mobile-only   : new-breakpoint(max-width $mobile);
+$upto-sm       : new-breakpoint(max-width $small-tablet);
 $upto-md       : new-breakpoint(max-width $large-tablet);
 $upto-lg       : new-breakpoint(max-width $desktop);
