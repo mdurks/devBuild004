@@ -172,48 +172,57 @@ body {
 	&_white 		{ color: $cm_white; }
 }
 
-.pad
+.mar
 {
 	&_top_noHero
 	{
-		padding-top: $pd_secondary;
+		margin-top: $pd_secondary;
 
 		@include media($sm) {
-			padding-top: $pd_primary;
+			margin-top: $pd_primary;
 		}
 	}
 
-	&_top_big
+	&_top_lrg
 	{
-		padding-top: $pm_primary;
+		margin-top: $pm_primary;
 
 		@include media($sm) {
-			padding-top: $pd_primary;
+			margin-top: $pd_primary;
 		}
 	}
 
 	&_top_med
 	{
-		padding-top: $pm_secondary;
+		margin-top: $pm_secondary;
 
 		@include media($sm) {
-			padding-top: $pd_secondary;
+			margin-top: $pd_secondary;
+		}
+	}
+
+	&_btm_lrg
+	{
+		margin-bottom: $pm_secondary;
+
+		@include media($sm) {
+			margin-bottom: $pd_primary;
 		}
 	}
 
 	&_btm_med
 	{
-		padding-bottom: $pm_secondary;
+		margin-bottom: $pm_secondary;
 
 		@include media($sm) {
-			padding-bottom: $pd_secondary;
+			margin-bottom: $pd_secondary;
 		}
 	}
 
 	&_btm_med_m
 	{
 		@include media($upto-sm) {
-			padding-bottom: $pm_secondary;
+			margin-bottom: $pm_secondary;
 		}
 	}
 }
@@ -613,7 +622,7 @@ strong, .bold {
 		padding-bottom: 15px;
 
 		@include media($sm) {
-			padding: 150px 10% 50px 30%;
+			padding: 150px 5% 50px 40%;
 		}
 	}
 
@@ -645,3 +654,98 @@ strong, .bold {
 	}
 }
 
+.formBlock
+{
+	padding: 15px 0 30px;
+
+	@include media($sm) {
+		padding: 35px 40px;
+		border: 1px solid $c_grey-light;
+		border-radius: 4px;
+	}
+
+	.columns{
+		margin: 0;
+	}
+
+	&__fields
+	{
+		@include media($sm) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	input, select, textarea
+	{
+		margin-bottom: 20px;
+		padding: 10px;
+		border-radius: 2px;
+		border: 1px solid $c_grey-light;
+	}
+
+	&--field
+	{
+		&-title
+		{
+			width: 100%;
+
+			@include media($sm) {
+				width: 20%;
+				min-width: 75px;
+				margin-right: 5%
+			}
+		}
+
+		&-name
+		{
+			width: 100%;
+
+			@include media($sm) {
+				width: 75%;
+			}
+		}
+
+		&-telephone
+		{
+			width: 100%;
+
+			@include media($sm) {
+				width: 40%;
+				min-width: 160px;
+				margin-right: 5%
+			}
+		}
+
+		&-email
+		{
+			width: 100%;
+
+			@include media($sm) {
+				width: 55%;
+			}
+		}
+
+		&-comments
+		{
+			padding: 12px 16px;
+			width: 100%;
+			height: 100px;
+			font-family: $font-body;
+		}
+	}
+
+	&--submitBtn
+	{
+		padding: 10px 20px;
+		border-radius: 30px;
+		border: 0;
+		background-color: $cm_secondary;
+		color: $c_white;
+		font-weight: 700;
+
+		@include media($upto_sm) {
+			display: block;
+		}
+	}
+}

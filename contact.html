@@ -37,11 +37,33 @@
 
     <main class="main">
 
-        <div class="mainColumn">
+        <div class="mainColumn mar_top_noHero">
 
             <h1 class="hd_primary fs_primary">You can use the contact form below to contact us:</h1>
 
-            <form action="">Form goes here</form>
+            <form class="formBlock mar_btm_lrg" action="">
+                <div class="columns">
+                    <div class="col6">
+                        <div class="formBlock__fields">
+                            <select class="formBlock--field-title">
+                                <option value="Title" disabled selected>Title</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Mrs">Mrs</option>
+                            </select>
+                            <input class="formBlock--field-name" type="text" placeholder="Full name...">
+                        </div>
+                        <div class="formBlock__fields">
+                            <input class="formBlock--field-telephone" type="number" placeholder="Telephone number...">
+                            <input class="formBlock--field-email" type="email" placeholder="Email address...">
+                        </div>
+                    </div>
+                    <div class="col6">
+                        <textarea class="formBlock--field-comments" rows="6" placeholder="Please enter any additional enquiry details here..."></textarea>
+                    </div>
+                </div>
+                <button class="formBlock--submitBtn" type="submit">Send Enquiry</button>
+            </form>
 
             <h1 class="hd_primary fs_primary">More ways to get in touch:</h1>
 
