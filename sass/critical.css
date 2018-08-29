@@ -728,17 +728,17 @@ strong, .bold {
     margin: 0 0 10px;
     height: 100px;
     background-repeat: no-repeat;
-    background-position: -12% top;
-    -moz-background-size: 200%;
-      -o-background-size: 200%;
-         background-size: 200%;
+    background-position: center center;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+         background-size: cover;
   }
 }
 
 @media screen and (max-width: 544px) {
   .hero.hero--img-home {
     background-image: none;
-    background-color: #ececec;
+    background-color: #929292;
   }
 }
 

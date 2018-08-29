@@ -605,15 +605,15 @@ strong, .bold {
 			margin: 0 0 10px;
 			height: 100px;
 			background-repeat: no-repeat;
-			background-position: -12% top;
-			background-size: 200%;
+			background-position: center center;
+			background-size: cover;
 		}
 	}
 
 	@include media($mobile-only) {
 		&.hero--img-home {
 			background-image: none;
-			background-color: #ececec;
+			background-color: #929292;
 		}
 	}
 
