@@ -80,9 +80,6 @@ p
 		line-height: 1.5em;
 	}
 
-	&+p {
-	}
-
 	&:last-of-type {
 		margin-bottom: 0;
 	}
@@ -149,6 +146,17 @@ p
 		@include media($sm) {
 			line-height: 1.2em;
 			font-size: $fs_heading_desktop_secondary;
+		}
+
+		&--hero
+		{
+			line-height: 1.15em;
+			font-size: $fs_heading_mobile_tertiary;
+
+			@include media($sm) {
+				line-height: 1.2em;
+				font-size: $fs_heading_desktop_secondary;
+			}
 		}
 	}
 

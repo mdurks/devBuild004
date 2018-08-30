@@ -200,6 +200,18 @@ p:last-of-type {
   }
 }
 
+.fs_secondary--hero {
+  line-height: 1.15em;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 640px) {
+  .fs_secondary--hero {
+    line-height: 1.2em;
+    font-size: 26px;
+  }
+}
+
 .fs_tertiary {
   line-height: 1.2em;
   font-size: 18px;
