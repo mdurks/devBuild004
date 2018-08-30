@@ -64,10 +64,27 @@ body {
 	height: 100vh;
 	line-height: 1em;
 	color: $cm_primary;
-	overflow-x: hidden; // for mobile menu
+	overflow-x: hidden; // for mobile menu which is offscreen and causes a horizontal scroll bar
 
 	@include media($sm) {
 		overflow-x: auto; // for mobile menu
+	}
+}
+
+p
+{
+	margin-bottom: 20px;
+	line-height: 1.4em;
+
+	@include media($sm) {
+		line-height: 1.5em;
+	}
+
+	&+p {
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
 	}
 }
 
@@ -236,19 +253,6 @@ body {
 		padding-bottom: $pd_primary;
 	}
 
-	p
-	{
-		margin-bottom: 20px;
-		line-height: 1.4em;
-
-		@include media($sm) {
-			line-height: 1.5em;
-		}
-
-		&+p {
-		}
-	}
-
 	.unstyledLink {
 		text-decoration: none;
 		color: $cm_primary;
@@ -351,7 +355,7 @@ strong, .bold {
 		&::before {
 			position: absolute;
 			left: 0;
-			top: 6px;
+			top: 9px;
 			width: 6px;
 			height: 6px;
 			border-radius: 100%;
@@ -604,7 +608,7 @@ strong, .bold {
 	@include media($mobile-only) {
 		&--img-home-mobile {
 			margin: 0 0 10px;
-			height: 100px;
+			height: 150px;
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: cover;
@@ -620,7 +624,7 @@ strong, .bold {
 
 	&__homepageTitle
 	{
-		padding-bottom: 15px;
+		padding-bottom: 25px;
 
 		@include media($sm) {
 			padding: 175px 12% 70px;
@@ -629,7 +633,7 @@ strong, .bold {
 
 	&__aboutUsTitle
 	{
-		padding: 85px 15px 15px;
+		padding: 85px 15px 25px;
 
 		@include media($sm) {
 			padding: 175px 15% 70px;
@@ -638,7 +642,7 @@ strong, .bold {
 
 	&__whatWeDoTitle
 	{
-		padding: 85px 15px 15px;
+		padding: 85px 15px 25px;
 
 		@include media($sm) {
 			padding: 175px 20% 70px;
@@ -647,7 +651,7 @@ strong, .bold {
 
 	&__feesTitle
 	{
-		padding: 85px 15px 15px;
+		padding: 85px 15px 25px;
 
 		@include media($sm) {
 			padding: 175px 25% 70px;
@@ -744,6 +748,7 @@ strong, .bold {
 		background-color: $cm_secondary;
 		color: $c_white;
 		font-weight: 700;
+		cursor: pointer;
 
 		@include media($upto_sm) {
 			display: block;

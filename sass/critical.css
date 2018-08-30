@@ -115,6 +115,21 @@ body {
   }
 }
 
+p {
+  margin-bottom: 20px;
+  line-height: 1.4em;
+}
+
+@media screen and (min-width: 640px) {
+  p {
+    line-height: 1.5em;
+  }
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
 .mainColumn {
   padding: 0 15px;
   width: 100%;
@@ -243,7 +258,7 @@ body {
 }
 
 .mar_top_lrg {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 640px) {
@@ -289,23 +304,12 @@ body {
 }
 
 .main {
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 @media screen and (min-width: 640px) {
   .main {
     padding-bottom: 70px;
-  }
-}
-
-.main p {
-  margin-bottom: 20px;
-  line-height: 1.4em;
-}
-
-@media screen and (min-width: 640px) {
-  .main p {
-    line-height: 1.5em;
   }
 }
 
@@ -428,7 +432,7 @@ strong, .bold {
 .bullet--disc::before {
   position: absolute;
   left: 0;
-  top: 6px;
+  top: 9px;
   width: 6px;
   height: 6px;
   -webkit-border-radius: 100%;
@@ -694,7 +698,7 @@ strong, .bold {
 }
 
 .hero {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   background-repeat: no-repeat;
   background-position: center center;
   -moz-background-size: cover;
@@ -727,7 +731,7 @@ strong, .bold {
 @media screen and (max-width: 544px) {
   .hero--img-home-mobile {
     margin: 0 0 10px;
-    height: 100px;
+    height: 150px;
     background-repeat: no-repeat;
     background-position: center center;
     -moz-background-size: cover;
@@ -744,7 +748,7 @@ strong, .bold {
 }
 
 .hero__homepageTitle {
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
 
 @media screen and (min-width: 640px) {
@@ -754,7 +758,7 @@ strong, .bold {
 }
 
 .hero__aboutUsTitle {
-  padding: 85px 15px 15px;
+  padding: 85px 15px 25px;
 }
 
 @media screen and (min-width: 640px) {
@@ -764,7 +768,7 @@ strong, .bold {
 }
 
 .hero__whatWeDoTitle {
-  padding: 85px 15px 15px;
+  padding: 85px 15px 25px;
 }
 
 @media screen and (min-width: 640px) {
@@ -774,7 +778,7 @@ strong, .bold {
 }
 
 .hero__feesTitle {
-  padding: 85px 15px 15px;
+  padding: 85px 15px 25px;
 }
 
 @media screen and (min-width: 640px) {
@@ -883,6 +887,7 @@ strong, .bold {
   background-color: #45b7b7;
   color: #fff;
   font-weight: 700;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 640px) {
