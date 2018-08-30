@@ -131,10 +131,11 @@ p
 .fs
 {
 	&_primary {
-		line-height: 1em;
+		line-height: 1.05em;
 		font-size: $fs_heading_mobile_primary;
 
 		@include media($sm) {
+			line-height: 1em;
 			font-size: $fs_heading_desktop_primary;
 		}
 	}
