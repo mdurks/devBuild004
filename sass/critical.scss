@@ -126,10 +126,11 @@ body {
 	}
 
 	&_secondary {
-		line-height: 1.2em;
+		line-height: 1em;
 		font-size: $fs_heading_mobile_secondary;
 
 		@include media($sm) {
+			line-height: 1.2em;
 			font-size: $fs_heading_desktop_secondary;
 		}
 	}
@@ -622,7 +623,7 @@ strong, .bold {
 		padding-bottom: 15px;
 
 		@include media($sm) {
-			padding: 150px 5% 50px 40%;
+			padding: 175px 12% 70px;
 		}
 	}
 
@@ -649,7 +650,7 @@ strong, .bold {
 		padding: 85px 15px 15px;
 
 		@include media($sm) {
-			padding: 175px 30% 70px;
+			padding: 175px 25% 70px;
 		}
 	}
 }
