@@ -840,6 +840,23 @@ strong, .bold {
   border: 1px solid #d4d4d4;
 }
 
+.formBlock label {
+  cursor: pointer;
+}
+
+.formBlock input.formBlock__consent_checkbox {
+  margin: 0 10px 0 0;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 640px) {
+  .formBlock__consentLabel {
+    width: 66%;
+  }
+}
+
 .formBlock--field-title {
   width: 100%;
 }
@@ -856,7 +873,7 @@ strong, .bold {
   width: 100%;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 968px) {
   .formBlock--field-name {
     width: 75%;
   }
@@ -866,7 +883,7 @@ strong, .bold {
   width: 100%;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 968px) {
   .formBlock--field-telephone {
     width: 40%;
     min-width: 160px;
@@ -878,7 +895,7 @@ strong, .bold {
   width: 100%;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 968px) {
   .formBlock--field-email {
     width: 55%;
   }

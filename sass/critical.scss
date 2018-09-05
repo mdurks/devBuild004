@@ -678,7 +678,7 @@ strong, .bold {
 		border-radius: 4px;
 	}
 
-	.columns{
+	.columns {
 		margin: 0;
 	}
 
@@ -698,6 +698,24 @@ strong, .bold {
 		border: 1px solid $c_grey-light;
 	}
 
+	label {
+		cursor: pointer;
+	}
+
+	input.formBlock__consent_checkbox
+	{
+		margin: 0 10px 0 0;
+		width: 17px;
+		height: 17px;
+		cursor: pointer;
+	}
+
+	&__consentLabel {
+		@include media($sm) {
+			width: 66%;
+		}
+	}
+
 	&--field
 	{
 		&-title
@@ -715,7 +733,7 @@ strong, .bold {
 		{
 			width: 100%;
 
-			@include media($sm) {
+			@include media($md-med) {
 				width: 75%;
 			}
 		}
@@ -724,7 +742,7 @@ strong, .bold {
 		{
 			width: 100%;
 
-			@include media($sm) {
+			@include media($md-med) {
 				width: 40%;
 				min-width: 160px;
 				margin-right: 5%
@@ -735,7 +753,7 @@ strong, .bold {
 		{
 			width: 100%;
 
-			@include media($sm) {
+			@include media($md-med) {
 				width: 55%;
 			}
 		}
