@@ -770,6 +770,12 @@ strong, .bold {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .hero__homepageTitle {
+    padding: 175px 260px 70px;
+  }
+}
+
 .hero__aboutUsTitle {
   padding: 85px 15px 25px;
 }
@@ -777,6 +783,12 @@ strong, .bold {
 @media screen and (min-width: 640px) {
   .hero__aboutUsTitle {
     padding: 175px 15% 70px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hero__aboutUsTitle {
+    padding: 175px 260px 70px;
   }
 }
 
@@ -790,6 +802,12 @@ strong, .bold {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .hero__whatWeDoTitle {
+    padding: 175px 260px 70px;
+  }
+}
+
 .hero__feesTitle {
   padding: 85px 15px 25px;
 }
@@ -797,6 +815,12 @@ strong, .bold {
 @media screen and (min-width: 640px) {
   .hero__feesTitle {
     padding: 175px 25% 70px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hero__feesTitle {
+    padding: 175px 350px 70px;
   }
 }
 

@@ -638,6 +638,9 @@ strong, .bold {
 		@include media($sm) {
 			padding: 175px 12% 70px;
 		}
+		@include media($xxl) {
+			padding: 175px 260px 70px;
+		}
 	}
 
 	&__aboutUsTitle
@@ -646,6 +649,9 @@ strong, .bold {
 
 		@include media($sm) {
 			padding: 175px 15% 70px;
+		}
+		@include media($xxl) {
+			padding: 175px 260px 70px;
 		}
 	}
 
@@ -656,6 +662,9 @@ strong, .bold {
 		@include media($sm) {
 			padding: 175px 20% 70px;
 		}
+		@include media($xxl) {
+			padding: 175px 260px 70px;
+		}
 	}
 
 	&__feesTitle
@@ -664,6 +673,9 @@ strong, .bold {
 
 		@include media($sm) {
 			padding: 175px 25% 70px;
+		}
+		@include media($xxl) {
+			padding: 175px 350px 70px;
 		}
 	}
 }
