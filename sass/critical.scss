@@ -59,9 +59,9 @@ html {
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
+	// display: flex;
+	// flex-direction: column;
+	// height: 100vh;
 	line-height: 1em;
 	color: $cm_primary;
 	overflow-x: hidden; // for mobile menu which is offscreen and causes a horizontal scroll bar
@@ -531,7 +531,7 @@ strong, .bold {
 
 .main
 {
-	flex: 2;
+	display: block;
 }
 
 .footer
