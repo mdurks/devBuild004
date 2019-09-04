@@ -10,10 +10,12 @@
 </head>
 <body>
 
+    <a class="focusable visually-hidden" href="#main-content">Skip to main content</a>
+
     <header class="header">
         <div class="mainColumn">
-            <a href="index.html" class="header__logo"></a>
-            <button class="nav__burgerBtn">
+            <a href="index.html" class="header__logo">Kitts Wealth Management link to homepage</a>
+            <button class="nav__burgerBtn" aria-label="Mobile Menu Button">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -35,7 +37,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="main-content">
 
         <div class="mainColumn mar_top_noHero">
 
@@ -45,21 +47,34 @@
                 <div class="columns">
                     <div class="col6">
                         <div class="formBlock__fields">
-                            <select class="formBlock--field-title">
-                                <option value="Title" disabled selected>Title</option>
-                                <option value="Mr">Mr</option>
-                                <option value="Miss">Miss</option>
-                                <option value="Mrs">Mrs</option>
-                            </select>
-                            <input class="formBlock--field-name" type="text" placeholder="Full name...">
+                            <div class="formBlock--field-title">
+                                <label class="formBlock--field-label" for="formTitle">Title:</label>
+                                <select id="formTitle">
+                                    <option value="Select" disabled selected>Select</option>
+                                    <option value="Mr">Mr</option>
+                                    <option value="Miss">Miss</option>
+                                    <option value="Mrs">Mrs</option>
+                                </select>
+                            </div>
+                            <div class="formBlock--field-name">
+                                <label class="formBlock--field-label" for="formName">Full name:</label>
+                                <input type="text" id="formName">
+                            </div>
                         </div>
                         <div class="formBlock__fields">
-                            <input class="formBlock--field-telephone" type="number" placeholder="Telephone number...">
-                            <input class="formBlock--field-email" type="email" placeholder="Email address...">
+                            <div class="formBlock--field-telephone">
+                                <label class="formBlock--field-label" for="formNumber">Telephone number:</label>
+                                <input type="number" id="formNumber">
+                            </div>
+                            <div class="formBlock--field-email">
+                                <label class="formBlock--field-label" for="formEmail">Email address:</label>
+                                <input type="email" id="formEmail">
+                            </div>
                         </div>
                     </div>
                     <div class="col6">
-                        <textarea class="formBlock--field-comments" rows="6" placeholder="Please enter any additional enquiry details here..."></textarea>
+                        <label class="formBlock--field-label" for="formComments">Please enter any additional enquiry details here:</label>
+                        <textarea class="formBlock--field-comments" id="formComments" rows="6"></textarea>
                     </div>
                 </div>
 

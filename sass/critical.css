@@ -1,12 +1,10 @@
 html {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 *, *::after, *::before {
   -webkit-box-sizing: inherit;
-     -moz-box-sizing: inherit;
           box-sizing: inherit;
 }
 
@@ -38,13 +36,11 @@ ol, ul {
 
 html {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
-     -moz-box-sizing: inherit;
           box-sizing: inherit;
 }
 
@@ -240,7 +236,7 @@ p:last-of-type {
 }
 
 .cm_tertiary {
-  color: #348286;
+  color: #338084;
 }
 
 .cm_white {
@@ -325,8 +321,6 @@ p:last-of-type {
 @media screen and (min-width: 640px) {
   .columns {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 30px;
@@ -377,9 +371,6 @@ p:last-of-type {
   .columns.reverseCols {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
@@ -413,9 +404,7 @@ strong, .bold {
   top: 5px;
   width: 30px;
   height: 30px;
-  -webkit-border-radius: 100%;
-     -moz-border-radius: 100%;
-          border-radius: 100%;
+  border-radius: 100%;
   border: 1px solid #464646;
   content: "\2714";
   color: #464646;
@@ -435,11 +424,27 @@ strong, .bold {
   top: 9px;
   width: 6px;
   height: 6px;
-  -webkit-border-radius: 100%;
-     -moz-border-radius: 100%;
-          border-radius: 100%;
+  border-radius: 100%;
   content: "";
   background-color: #45b7b7;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.focusable.visually-hidden:focus {
+  position: relative;
+  left: 0;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  border-bottom: none;
 }
 
 .header {
@@ -449,8 +454,6 @@ strong, .bold {
 @media screen and (min-width: 640px) {
   .header .mainColumn {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
   }
@@ -463,9 +466,9 @@ strong, .bold {
   background-image: url("../img/logo.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  -moz-background-size: contain;
-    -o-background-size: contain;
-       background-size: contain;
+  background-size: contain;
+  text-indent: -999999px;
+  color: #000;
 }
 
 @media screen and (min-width: 640px) {
@@ -485,10 +488,8 @@ strong, .bold {
   background-color: #45b7b7;
   -webkit-transition: -webkit-transform .3s ease;
   transition: -webkit-transform .3s ease;
-  -o-transition: -o-transform .3s ease;
-  -moz-transition: transform .3s ease, -moz-transform .3s ease;
   transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease, -moz-transform .3s ease, -o-transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
 @media screen and (min-width: 640px) {
@@ -504,9 +505,6 @@ strong, .bold {
 
 .nav--menu_open {
   -webkit-transform: translateX(-100%);
-     -moz-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-       -o-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
@@ -518,9 +516,7 @@ strong, .bold {
   height: 30px;
   padding: 0;
   border: 2px solid #45b7b7;
-  -webkit-border-radius: 100%;
-     -moz-border-radius: 100%;
-          border-radius: 100%;
+  border-radius: 100%;
   background: none;
   cursor: pointer;
 }
@@ -537,9 +533,7 @@ strong, .bold {
   width: 14px;
   height: 3px;
   background-color: #45b7b7;
-  -webkit-border-radius: 100px;
-     -moz-border-radius: 100px;
-          border-radius: 100px;
+  border-radius: 100px;
 }
 
 .nav__burgerBtn span:nth-child(2) {
@@ -552,9 +546,7 @@ strong, .bold {
   width: 34px;
   height: 34px;
   border: 2px solid #fff;
-  -webkit-border-radius: 100%;
-     -moz-border-radius: 100%;
-          border-radius: 100%;
+  border-radius: 100%;
   cursor: pointer;
 }
 
@@ -566,18 +558,12 @@ strong, .bold {
   left: 6px;
   background-color: #fff;
   -webkit-transform: rotate(45deg);
-     -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-       -o-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .nav__close_mobile_menu span:nth-child(2) {
   top: 10px;
   -webkit-transform: rotate(-45deg);
-     -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-       -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
@@ -590,8 +576,6 @@ strong, .bold {
 @media screen and (min-width: 640px) {
   .nav__list-container {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
   }
@@ -599,8 +583,6 @@ strong, .bold {
 
 .nav__list-container li {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-     -moz-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
 }
@@ -697,9 +679,7 @@ strong, .bold {
   margin-bottom: 20px;
   background-repeat: no-repeat;
   background-position: center center;
-  -moz-background-size: cover;
-    -o-background-size: cover;
-       background-size: cover;
+  background-size: cover;
 }
 
 @media screen and (min-width: 640px) {
@@ -730,9 +710,7 @@ strong, .bold {
     height: 150px;
     background-repeat: no-repeat;
     background-position: center center;
-    -moz-background-size: cover;
-      -o-background-size: cover;
-         background-size: cover;
+    background-size: cover;
   }
 }
 
@@ -815,9 +793,7 @@ strong, .bold {
   .formBlock {
     padding: 35px 40px;
     border: 1px solid #d4d4d4;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
+    border-radius: 4px;
   }
 }
 
@@ -828,27 +804,26 @@ strong, .bold {
 @media screen and (min-width: 640px) {
   .formBlock__fields {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 .formBlock input, .formBlock select, .formBlock textarea {
+  width: 100%;
   margin-bottom: 20px;
   padding: 10px;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
+  border-radius: 2px;
   border: 1px solid #d4d4d4;
 }
 
 .formBlock label {
-  cursor: pointer;
+  position: relative;
+  display: block;
+  margin: 0 0 10px 0;
+  cursor: text;
 }
 
 .formBlock input.formBlock__consent_checkbox {
@@ -917,11 +892,9 @@ strong, .bold {
 
 .formBlock--submitBtn {
   padding: 10px 20px;
-  -webkit-border-radius: 30px;
-     -moz-border-radius: 30px;
-          border-radius: 30px;
+  border-radius: 30px;
   border: 0;
-  background-color: #45b7b7;
+  background-color: #338084;
   color: #fff;
   font-weight: 700;
   cursor: pointer;

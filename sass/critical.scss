@@ -381,6 +381,31 @@ strong, .bold {
 
 
 
+.visually-hidden {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden
+}
+
+.focusable.visually-hidden:focus {
+	position: relative;
+	left: 0;
+	width: auto;
+	height: auto;
+	overflow: auto;
+	border-bottom: none
+}
+
+
+
+
+
+
+
+
 // Blocks
 
 .header
@@ -401,6 +426,8 @@ strong, .bold {
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: contain;
+		text-indent: -999999px;
+		color: $c_black;
 
 		@include media($sm) {
 			width: 170px;
@@ -704,6 +731,7 @@ strong, .bold {
 
 	input, select, textarea
 	{
+		width: 100%;
 		margin-bottom: 20px;
 		padding: 10px;
 		border-radius: 2px;
@@ -711,7 +739,10 @@ strong, .bold {
 	}
 
 	label {
-		cursor: pointer;
+		position: relative;
+    	display: block;
+		margin: 0 0 10px 0;
+		cursor: text;
 	}
 
 	input.formBlock__consent_checkbox
@@ -730,6 +761,7 @@ strong, .bold {
 
 	&--field
 	{
+
 		&-title
 		{
 			width: 100%;
@@ -784,7 +816,7 @@ strong, .bold {
 		padding: 10px 20px;
 		border-radius: 30px;
 		border: 0;
-		background-color: $cm_secondary;
+		background-color: $cm_tertiary;
 		color: $c_white;
 		font-weight: 700;
 		cursor: pointer;
